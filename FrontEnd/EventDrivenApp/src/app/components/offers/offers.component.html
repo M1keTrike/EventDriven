@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Gestión de Ofertas</h2>
+  
+    <form [formGroup]="offerForm" (ngSubmit)="createOffer()">
+      <label for="product">Producto:</label>
+      <input id="product" formControlName="product" type="text" required>
+  
+      <label for="price">Precio:</label>
+      <input id="price" formControlName="price" type="number" required>
+  
+      <label for="time">Fecha y Hora:</label>
+      <input id="time" formControlName="time" type="datetime-local" required>
+  
+      <button type="submit">Agregar Oferta</button>
+    </form>
+  
+    <h3>Lista de Ofertas</h3>
+    <div class="table-container">
+      <table class="offers-table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let offer of offers">
+            <td>{{ offer.Product }}</td>
+            <td>{{ offer.Price | currency }}</td>
+            <td>{{ offer.Time }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

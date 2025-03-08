@@ -1,0 +1,24 @@
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .offers-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .offers-table th, .offers-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .offers-table th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+  }
+  
