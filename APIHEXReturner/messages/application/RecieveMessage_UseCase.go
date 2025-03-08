@@ -15,16 +15,13 @@ func NewRecieveMessageUseCase(sm_uc *SendMessageUseCase) *RecieveMessageUseCase 
 }
 
 func (r *RecieveMessageUseCase) Execute(id int, user_id int, product string, price float32, time string) error {
-	
+
 	message := domain.NewMessage(id, user_id, product, price, time)
 
 	fmt.Println(message)
 
 	ofJSON, err := domain.ToJSON(message)
 
-
-
-	
 	if err != nil {
 		return err
 	}
